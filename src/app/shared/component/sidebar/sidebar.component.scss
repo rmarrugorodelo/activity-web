@@ -1,0 +1,83 @@
+@import '../../../../assets/css/color.scss';
+
+  .mpb{
+    padding-top: 0px !important;
+  }
+  #sidebar {
+    background-color: #fff;
+    min-width: 270px;
+    max-width: 270px;
+    color: $main;
+    height: 100%;
+    transition: all 0.3s;
+    -webkit-box-shadow: 2px 0px 2px -1px rgba(0,0,0,0.12);
+    -moz-box-shadow: 2px 0px 2px -1px rgba(0,0,0,0.12);
+    box-shadow: 2px 0px 2px -1px rgba(0,0,0,0.12);
+    position: relative;
+    z-index: 10;
+    &.active{
+      min-width: 140px;
+      max-width: 140px;
+      text-align: center;
+        ul.components{
+
+          li{
+              font-size: 14px;
+              a{
+                  display: flex;
+                  flex-direction: column;
+                  padding: 15px 0;
+                  align-items: center;
+                  font-weight: 600;
+                  span{
+                      margin-right: 0;
+                      display: block;
+                      font-size: 46px;
+                  }
+                }
+          }
+        }
+    }
+
+    ul.components{
+        padding-top: 55px;
+    }
+    ul{
+      li{
+          font-size: 16px;
+          a{
+              padding: 10px 30px;
+              display: block;
+              color: $main;
+              border-bottom: 1px solid rgba(255,255,255,.1);
+              span{
+                  margin-right: 15px;
+              }
+              &:hover{
+                background-color: #e1e7ef;
+              }
+          }
+          &.active{
+              > a{
+                  background: transparent;
+                  color: $main;
+              }
+          }
+          &:hover{
+            border-right: 5px solid $main !important;
+          }
+      }
+    }
+
+  }
+
+  .icon {
+    font-size: 27px;
+  }
+
+  .ul-close-sesion {
+    position: absolute;
+    bottom: 100px;
+    text-align: center;
+    width: 100%;
+  }

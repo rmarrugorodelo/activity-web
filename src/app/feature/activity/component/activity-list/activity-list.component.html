@@ -1,0 +1,58 @@
+<div class="card shaded-card">
+  <h3 class="module-title without-padding">Actividades</h3>
+  <div class="card-body">
+    <div class="row">
+      <div class="col d-flex justify-content-end">
+        <button type="button" class="btn btn-primary" (click)="open()">
+          Crear
+        </button>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-12 mt-3">
+        <table class="table">
+          <thead class="thead-light">
+            <tr>
+              <th scope="col">Descripción</th>
+              <th scope="col">Empleado</th>
+              <th scope="col">Fecha estimada</th>
+              <th scope="col">Retraso</th>
+              <th scope="col">Estado</th>
+              <th scope="col">Fecha Fin</th>
+              <th scope="col" class="w-10">Acciones</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let activity of activities?.content" >
+              <td class="align-middle">{{ activity.description }}</td>
+              <td class="align-middle">{{ activity.employee.name }}</td>
+              <td class="align-middle">{{ activity.executionDate | date: 'yyyy-MM-dd hh:mm:ss'  }}</td>
+              <td class="align-middle">{{ activity.days }}</td>
+              <td class="align-middle">{{ activity.status }}</td>
+              <td class="align-middle">{{ activity.completedDate | date: 'yyyy-MM-dd hh:mm:ss'  }}</td>
+              <td class="align-middle text-center">
+                <div ngbDropdown class="d-inline-block" >
+                  <button class="btn dropdown-actions" id="dropdownBasic1" ngbDropdownToggle>
+                    ...
+                  </button>
+                  <div ngbDropdownMenu aria-labelledby="dropdownBasic1">
+                    <button ngbDropdownItem (click)="open(activity)">
+                      Editar
+                    </button>
+                    <button ngbDropdownItem (click)="onComplete(activity)">
+                      Completar
+                    </button>
+                    <button ngbDropdownItem (click)="onDelete(activity)">
+                      Eliminar
+                    </button>
+                  </div>
+                </div>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,34 @@
+.navbar {
+  padding: 0.8rem 1rem !important;
+  -webkit-box-shadow: 2px 1px 2px 1px rgba(0,0,0,0.12);
+  -moz-box-shadow: 2px 1px 2px 1px rgba(0,0,0,0.12);
+  box-shadow: 2px 1px 2px 1px rgba(0,0,0,0.12);
+  background-color: #fff;
+}
+
+.img-fluid {
+  width: 100%;
+  vertical-align: text-top !important;
+}
+
+.test:after {
+  content: "";
+  display: block;
+  height: 5px;
+  background-image: url('../../../../assets/images/line.svg');
+  background-repeat: no-repeat;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+.navbar-text {
+  font-family: 'GothamSSm-Medium';
+  font-size: 21px;
+  color: #1d4370 !important;
+  font-weight: 700;
+}
+
+
+

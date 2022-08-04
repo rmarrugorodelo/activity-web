@@ -1,0 +1,12 @@
+<svg id="Linea_divisoria" data-name="Linea divisoria" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1366" height="5" viewBox="0 0 1366 5">
+  <defs>
+    <linearGradient id="linear-gradient" x1="0.5" x2="0.5" y2="1" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#94c12e"/>
+      <stop offset="0.505" stop-color="#04bbf1"/>
+      <stop offset="1" stop-color="#0f2238"/>
+    </linearGradient>
+  </defs>
+  <g id="Grupo_1205" data-name="Grupo 1205" transform="translate(894 58.868) rotate(90)">
+    <path id="Trazado_697" data-name="Trazado 697" d="M0,0H5V1366H0Z" transform="translate(-58.868 -472)" fill="url(#linear-gradient)"/>
+  </g>
+</svg>

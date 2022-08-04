@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="57" height="57" viewBox="0 0 57 57">
+  <g id="Grupo_4" data-name="Grupo 4" transform="translate(-242.283 -87.283)">
+    <g id="Elipse_1" data-name="Elipse 1" transform="translate(242.283 87.283)" fill="#94c12e" stroke="#00a53d" stroke-width="1">
+      <circle cx="28.5" cy="28.5" r="28.5" stroke="none"/>
+      <circle cx="28.5" cy="28.5" r="28" fill="none"/>
+    </g>
+    <line id="Línea_2" data-name="Línea 2" x2="8.646" y2="8.646" transform="translate(255.139 117.431)" fill="none" stroke="#fff" stroke-linecap="round" stroke-width="5"/>
+    <line id="Línea_3" data-name="Línea 3" y1="20.872" x2="20.872" transform="translate(263.785 105.205)" fill="none" stroke="#fff" stroke-linecap="round" stroke-width="5"/>
+  </g>
+</svg>

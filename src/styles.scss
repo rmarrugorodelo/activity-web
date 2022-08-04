@@ -1,1 +1,323 @@
 /* You can add global styles to this file, and also import other style files */
+
+/* Importing Bootstrap SCSS file. */
+@import "./assets/css/color.scss";
+$primary: $main;
+
+@import "~bootstrap/scss/bootstrap";
+
+
+@font-face {
+  font-family: GothamSSm-Book;
+  src: url(assets/fonts/gotham/GothamSSm-Book.ttf) format("opentype");
+}
+
+@font-face {
+  font-family: GothamSSm-Light;
+  src: url(assets/fonts/gotham/GothamSSm-Light.ttf) format("opentype");
+}
+
+@font-face {
+  font-family: GothamSSm-Medium;
+  src: url(assets/fonts/gotham/GothamSSm-Medium.ttf) format("opentype");
+}
+
+html,
+body {
+  height: 100% !important;
+  font-family: "GothamSSm-Medium";
+  background-color: #f5f5f5;
+}
+
+.form-control {
+  border: 1px solid $border !important;
+  min-height: calc(2.2em + 0.75rem + 2px) !important;
+}
+
+label {
+  font-family: "GothamSSm-medium" !important;
+}
+
+.btn {
+  padding: 0.6rem 1rem !important;
+}
+
+.style-pointer {
+  cursor:pointer;
+}
+
+a:hover {
+  text-decoration: unset !important;
+}
+
+.container-fluid {
+  background-color: #fff;
+}
+
+.btn-primary {
+  background-color: $main !important;
+  border-color: $main !important;
+}
+
+.btn-outline-primary {
+  color: $main !important;
+  border-color: $main !important;
+}
+
+.btn-outline-primary:hover {
+  background-color: #fff !important;
+  border-color: $main !important;
+}
+
+.btn-outline-primary:focus {
+  box-shadow: unset !important;
+}
+
+.form-control.is-invalid,
+.was-validated .form-control:invalid {
+  border-color: #dc3545 !important;
+}
+
+.shaded-card {
+  -webkit-box-shadow: 0px 0px 5px 3px rgba(0, 0, 0, 0.05) !important;
+  -moz-box-shadow: 0px 0px 5px 3px rgba(0, 0, 0, 0.05) !important;
+  box-shadow: 0px 0px 5px 3px rgba(0, 0, 0, 0.05) !important;
+  border: unset !important;
+}
+.card {
+  width: 100%;
+}
+.form-group {
+  padding: 0rem 1.5rem !important;
+}
+
+.card-title {
+  margin-bottom: unset !important;
+  padding: 2rem 0rem 2rem 2rem;
+  font-size: 22px;
+}
+
+
+.invalid-feedback,
+.invalid-feedback div {
+  color: #dc3545 !important;
+}
+
+
+.swal2-popup.swal2-modal.swal2-show {
+  display: flex !important;
+  flex-direction: column !important;
+}
+
+.swal2-popup :nth-child(1) {
+  order: 2;
+}
+
+.swal2-popup :nth-child(2) {
+  order: 1;
+}
+
+.swal2-popup :nth-child(3) {
+  order: 3;
+}
+
+.swal2-html-container {
+  font-size: 28px;
+}
+
+.swal2-actions {
+  margin: unset !important;
+}
+
+.swal2-cancel {
+  background-color: #aaa !important;
+}
+
+.swal2-icon {
+  position: absolute !important;
+  margin-left: 30px !important;
+  margin-top: 1px !important;
+}
+
+.swal2-html-container {
+  padding: unset !important;
+  padding-bottom: 16px !important;
+  max-width: 72%;
+  align-self: center;
+  color: $primary !important;
+}
+
+.swal2-title {
+  font-size: 1.4em !important;
+  padding-bottom: 9px !important;
+  max-width: 72%;
+  justify-content: center;
+  align-self: center;
+}
+
+.swal2-close {
+  position: absolute !important;
+  right: 0 !important;
+  top: 0 !important;
+}
+
+.swal2-close:hover {
+  color: unset !important;
+}
+
+.swal2-close:focus {
+  box-shadow: unset !important;
+}
+
+.swal2-container.swal2-center > .swal2-popup {
+  padding: 35px 0px !important;
+  min-height: 150px;
+  justify-content: center;
+}
+
+.swal2-popup {
+  width: 52% !important;
+}
+
+.swal2-error ~ .swal2-title {
+  color: #f00 !important;
+}
+
+.swal2-success ~ .swal2-title {
+  color: #94c12e !important;
+}
+
+.swal2-icon {
+  width: 4em !important;
+  height: 4em !important;
+}
+
+.swal2-icon .swal2-icon-content {
+  font-size: 2.8em !important;
+}
+
+.swal2-title {
+  max-width: 75% !important;
+  word-break: break-word;
+}
+
+.swal2-icon.swal2-success [class^=swal2-success-line][class$=long] {
+  top: 2.0em !important;
+  right: .2em !important;
+  width: 2.6em !important;
+}
+
+.swal2-icon.swal2-success [class^=swal2-success-line][class$=tip] {
+  top: 2.4em !important;
+  left: .65em !important;
+  width: 1.1em !important;
+}
+
+.swal2-icon.swal2-error [class^=swal2-x-mark-line][class$=right] {
+  right: 0.7em !important;
+}
+
+.swal2-icon.swal2-error [class^=swal2-x-mark-line][class$=left] {
+  left: 0.7em !important;
+}
+
+.swal2-icon.swal2-error [class^=swal2-x-mark-line] {
+  top: 2.0em !important;
+  width: 2.8em !important;
+}
+
+
+.form-control:disabled,
+.form-control[readonly] {
+  background-color: #fff !important;
+  opacity: 1;
+  cursor: not-allowed;
+}
+
+.text-error {
+  color: #f00;
+}
+
+.text-success {
+  color: #94c12e;
+}
+
+.close:focus-visible {
+  border: 1px solid #FFF;
+  background-color: #FFF;
+  outline: none;
+  box-shadow: none;
+}
+
+.w-10 {
+  width: 10%;
+}
+
+.w-15 {
+  width: 15%;
+}
+
+.modal-footer .btn {
+  min-width: 150px ;
+}
+
+input[type="email"] {
+  text-transform: none !important;
+}
+
+.btn-icon-b {
+  background-color: #fff !important;
+  border: none !important;
+  color: #1D4370 !important;
+  font-size: 35px !important;
+  cursor: pointer !important;
+  width: 30px !important;
+  margin-bottom: 8px;
+  margin-left: 20px;
+}
+
+
+body.swal2-height-auto {
+  height: unset !important;
+}
+
+.module-subtitle {
+  margin-top: 20px;
+  margin-left: 30px;
+  margin-bottom: 30px;
+  font-size: 21px;
+  font-family: "GothamSSm-Medium";
+  color: #1d4370;
+}
+
+.module-subtitle-inside {
+  margin-left: 23px;
+  margin-bottom: 15px;
+  font-size: 21px;
+}
+
+.dropdown-actions {
+  border: unset !important;
+  padding: unset !important;
+  line-height: 0px !important;
+  font-size: 2rem !important;
+  margin-bottom: 10px;
+}
+
+.dropdown-actions.focus,
+.dropdown-actions:focus {
+  box-shadow: unset !important;
+}
+
+.dropdown-actions::after {
+  display: inline-block;
+  margin-left: unset !important;
+  vertical-align: unset !important;
+  content: "";
+  border-top: unset !important;
+  border-right: unset !important;
+  border-bottom: unset !important;
+  border-left: unset !important;
+}
+
+
