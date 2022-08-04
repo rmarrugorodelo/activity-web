@@ -2,7 +2,7 @@ import { Component, OnDestroy, OnInit } from '@angular/core';
 import { NgbModal, NgbModalOptions } from '@ng-bootstrap/ng-bootstrap';
 import { Subscription } from 'rxjs';
 import { AlertService } from '../../../../shared/service/alert.service';
-import { Activities, Activity } from '../../model/activity';
+import { Activity } from '../../model/activity';
 import { ActivityService } from '../../service/activity.service';
 import { ActivityFormComponent } from '../activity-form/activity-form.component';
 
@@ -13,7 +13,7 @@ import { ActivityFormComponent } from '../activity-form/activity-form.component'
 })
 export class ActivityListComponent implements OnInit, OnDestroy {
 
-  public activities: Activities
+  public activities: Array<Activity>
 
   private subscription = new Subscription();
   public language: string;
@@ -39,7 +39,6 @@ export class ActivityListComponent implements OnInit, OnDestroy {
   private find() {
     const sub = this.activityService.find().subscribe(resp => {
       this.activities = resp;
-      console.log('this.activities  ', this.activities );
     });
     this.subscription.add(sub);
   }

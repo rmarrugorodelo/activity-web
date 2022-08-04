@@ -24,7 +24,7 @@
             </tr>
           </thead>
           <tbody>
-            <tr *ngFor="let activity of activities?.content" >
+            <tr *ngFor="let activity of activities" >
               <td class="align-middle">{{ activity.description }}</td>
               <td class="align-middle">{{ activity.employee.name }}</td>
               <td class="align-middle">{{ activity.executionDate | date: 'yyyy-MM-dd hh:mm:ss'  }}</td>

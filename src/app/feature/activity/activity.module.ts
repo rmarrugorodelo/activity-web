@@ -7,7 +7,6 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { ActivityService } from './service/activity.service';
 import { EmployeeService } from '../employee/service/employee.service';
-import { HttpClientModule } from '@angular/common/http';
 
 const routes: Routes = [
   {
@@ -27,7 +26,6 @@ const routes: Routes = [
     RouterModule.forChild(routes),
     ReactiveFormsModule,
     FormsModule,
-    HttpClientModule,
     NgbModule
   ],
   providers: [

@@ -1,10 +1,8 @@
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import { HttpClient } from '@angular/common/http';
-import { map } from 'rxjs/operators';
 import { environment } from 'src/environments/environment';
-import { Activities, Activity } from '../model/activity';
-import { NumberLiteralType } from 'typescript';
+import {  Activity } from '../model/activity';;
 
 @Injectable()
 export class ActivityService {
@@ -15,8 +13,8 @@ export class ActivityService {
     this.url = `${environment.apiUrl}${this.url}`;
   }
 
-  public find(): Observable<Activities> {
-    return this.httpClient.get<Activities>(this.url);
+  public find(): Observable<Array<Activity>> {
+    return this.httpClient.get<Array<Activity>>(this.url);
   }
 
   public findById(id: number): Observable<Activity>  {

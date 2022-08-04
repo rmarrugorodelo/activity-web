@@ -1,0 +1,21 @@
+<div class="card shaded-card">
+  <h3 class="module-title without-padding">Empleados</h3>
+  <div class="card-body">
+    <div class="row">
+      <div class="col-12 mt-3">
+        <table class="table">
+          <thead class="thead-light">
+            <tr>
+              <th scope="col">Nombre</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let employee of employees" >
+              <td class="align-middle">{{ employee.name }}</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</div>

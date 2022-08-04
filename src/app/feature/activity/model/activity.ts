@@ -10,8 +10,3 @@ export interface Activity {
   completedDate: Date;
   days: number;
 }
-
-export interface Activities {
-  totalElements: number;
-  content: Array<Activity>;
-}

@@ -281,19 +281,12 @@ body.swal2-height-auto {
   height: unset !important;
 }
 
-.module-subtitle {
-  margin-top: 20px;
-  margin-left: 30px;
-  margin-bottom: 30px;
-  font-size: 21px;
-  font-family: "GothamSSm-Medium";
-  color: #1d4370;
-}
-
-.module-subtitle-inside {
-  margin-left: 23px;
-  margin-bottom: 15px;
-  font-size: 21px;
+.module-title {
+  font-size: 42px;
+  margin-top: 75px;
+  font-weight: 600;
+  padding: 0rem 2rem;
+  color: #1d4370 !important;
 }
 
 .dropdown-actions {

@@ -1,4 +1,11 @@
-import { HttpErrorResponse, HttpEvent, HttpHandler, HttpHeaderResponse, HttpInterceptor, HttpProgressEvent, HttpRequest, HttpResponse, HttpSentEvent, HttpUserEvent } from '@angular/common/http';
+import {
+  HttpHandler,
+  HttpInterceptor,
+  HttpRequest,
+  HttpResponse,
+  HttpErrorResponse,
+  HttpEvent
+} from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { NgxSpinnerService } from 'ngx-spinner';
 import { Observable, throwError } from 'rxjs';
@@ -15,7 +22,25 @@ export class HttpInterceptorService implements HttpInterceptor {
     if (!this.isResource(req.url)) {
       this.spinner.show();
     }
-    return next.handle(req);
+    return next.handle(req).pipe(
+      map((event: HttpEvent<any>) => {
+        if (event instanceof HttpResponse) {
+          this.spinner.hide();
+          return this.mapResponse(event);
+        } else {
+          return event;
+        }
+      }),
+      catchError((error) => {
+        let errorMessage = "";
+        if (error instanceof HttpErrorResponse) {
+          this.spinner.hide();
+          errorMessage = this.handleError(error);
+          this.alertService.showWarning(errorMessage);
+          return throwError(errorMessage);
+        }
+      })
+    );
   }
 
   private isResource(url: string): boolean {
@@ -31,12 +56,12 @@ export class HttpInterceptorService implements HttpInterceptor {
   }
 
   private handleError(error) {
-    if (error instanceof ErrorEvent) {
+    if (error.error.message) {
       console.log('Server-side error:' + error.error.message);
-      return `An internal error has occurred`;
+      return error.error.message;
     } else {
       console.log('Server-side error:' + error.status + '-' + error.message);
-      return `Communication with the server has been lost`;
+      return `Ha ocurrido un error, espere un momento por favor`;
     }
 
   }

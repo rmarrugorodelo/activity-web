@@ -12,7 +12,6 @@ import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
 import { CommonModule } from '@angular/common';
 import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { HttpInterceptorService } from './core/interceptor/http-interceptor.service';
-import { InterceptorService } from './core/interceptor/interceptor.service';
 
 @NgModule({
   declarations: [
@@ -33,7 +32,7 @@ import { InterceptorService } from './core/interceptor/interceptor.service';
   providers: [
     {
       provide: HTTP_INTERCEPTORS,
-      useClass: InterceptorService,
+      useClass: HttpInterceptorService,
       multi: true
     }
   ],
